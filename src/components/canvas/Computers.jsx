@@ -3,9 +3,10 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import React, { Suspense, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-const Computers = ({isMobile}) => {
+import lap from "../../assets/lap.png";
+const Computers = ({ isMobile }) => {
 	const computer = useGLTF("./desktop_pc/scene.gltf");
-	const computer1 = useLoader( GLTFLoader,"./desktop_pc/scene.gltf");
+	const computer1 = useLoader(GLTFLoader, "./desktop_pc/scene.gltf");
 	return (
 		<mesh>
 			<hemisphereLight intensity={0.15} groundColor="black" />
@@ -20,8 +21,8 @@ const Computers = ({isMobile}) => {
 			<pointLight intensity={1} />
 			<primitive
 				object={computer1.scene}
-				scale={isMobile ? 0.7: 0.75}
-				position={ isMobile ? [0 ,-3 ,-2.2]:[0, -3.25, -1.5]}
+				scale={isMobile ? 0.7 : 0.75}
+				position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
 				rotation={[-0.01, -0.2, -0.1]}
 			/>
 		</mesh>
@@ -29,9 +30,8 @@ const Computers = ({isMobile}) => {
 };
 
 const ComputersCanvas = () => {
-
-	
 	const [isMobile, setIsMobile] = useState(false);
+
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(max-width:500px)");
 		setIsMobile(mediaQuery.matches);
@@ -45,6 +45,7 @@ const ComputersCanvas = () => {
 			mediaQuery.removeEventListener("change", handleMediaQueryChange);
 		};
 	}, []);
+
 	return (
 		<Canvas
 			frameloop="demand"

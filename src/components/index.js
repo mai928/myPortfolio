@@ -7,10 +7,8 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
-import MobileHero from './MobileHero';
 
 export {
-  MobileHero,
   Hero,
   Navbar,
   About,

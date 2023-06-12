@@ -12,7 +12,6 @@ import {
 } from "./components";
 import { useState } from "react";
 function App() {
-	const [ismobile ,setMobile] =useState(false)
 	return (
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary">
@@ -22,14 +21,10 @@ function App() {
 				>
 					<Navbar />
 
-<div className="sm:block xs:hidden">
+			
 						<Hero />
-
-</div>
-<div className="xs:block sm:hidden">
-						<MobileHero />
-
-</div>
+				
+					
 				</div>
 
 				<About />

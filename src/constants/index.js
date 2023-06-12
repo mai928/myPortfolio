@@ -70,10 +70,10 @@ const technologies = [
 		name: "JavaScript",
 		icon: javascript,
 	},
-	{
-		name: "TypeScript",
-		icon: typescript,
-	},
+	// {
+	// 	name: "TypeScript",
+	// 	icon: typescript,
+	// },
 	{
 		name: "React JS",
 		icon: reactjs,

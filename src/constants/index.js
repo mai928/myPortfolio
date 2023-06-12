@@ -21,6 +21,7 @@ import {
 	blog,
 	iti,
 	commerce,
+	html1,
 } from "../assets";
 
 export const navLinks = [
@@ -60,7 +61,7 @@ const services = [
 const technologies = [
 	{
 		name: "HTML 5",
-		icon: html,
+		icon: html1,
 	},
 	{
 		name: "CSS 3",

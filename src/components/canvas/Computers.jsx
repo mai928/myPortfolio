@@ -1,9 +1,11 @@
 import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import React, { Suspense, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const Computers = ({isMobile}) => {
 	const computer = useGLTF("./desktop_pc/scene.gltf");
+	const computer1 = useLoader( GLTFLoader,"./desktop_pc/scene.gltf");
 	return (
 		<mesh>
 			<hemisphereLight intensity={0.15} groundColor="black" />
@@ -17,7 +19,7 @@ const Computers = ({isMobile}) => {
 			/>
 			<pointLight intensity={1} />
 			<primitive
-				object={computer.scene}
+				object={computer1.scene}
 				scale={isMobile ? 0.7: 0.75}
 				position={ isMobile ? [0 ,-3 ,-2.2]:[0, -3.25, -1.5]}
 				rotation={[-0.01, -0.2, -0.1]}
@@ -29,20 +31,20 @@ const Computers = ({isMobile}) => {
 const ComputersCanvas = () => {
 
 	
-	// const [isMobile, setIsMobile] = useState(true);
-	// useEffect(() => {
-	// 	const mediaQuery = window.matchMedia("(max-width:300px)");
-	// 	setIsMobile(mediaQuery.matches);
+	const [isMobile, setIsMobile] = useState(false);
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width:300px)");
+		setIsMobile(mediaQuery.matches);
 
-	// 	const handleMediaQueryChange = (e) => {
-	// 		setIsMobile(e.matches);
-	// 	};
+		const handleMediaQueryChange = (e) => {
+			setIsMobile(e.matches);
+		};
 
-	// 	mediaQuery.addEventListener("change", handleMediaQueryChange);
-	// 	return () => {
-	// 		mediaQuery.removeEventListener("change", handleMediaQueryChange);
-	// 	};
-	// }, []);
+		mediaQuery.addEventListener("change", handleMediaQueryChange);
+		return () => {
+			mediaQuery.removeEventListener("change", handleMediaQueryChange);
+		};
+	}, []);
 	return (
 		<Canvas
 			frameloop="demand"
@@ -56,7 +58,7 @@ const ComputersCanvas = () => {
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
 				/>
-				<Computers />
+				<Computers isMobile={isMobile} />
 			</Suspense>
 			<Preload all />
 		</Canvas>

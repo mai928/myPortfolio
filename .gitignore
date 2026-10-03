@@ -11,6 +11,9 @@
 # production
 /build
 
+/public/desktop_pc 
+/public/planet
+
 # misc
 .DS_Store
 .env.local

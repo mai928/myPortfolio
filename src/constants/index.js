@@ -10,7 +10,6 @@ import {
   figma,
   threejs,
   amazon,
-  fitness,
   youtub,
   registation,
   recipe2,

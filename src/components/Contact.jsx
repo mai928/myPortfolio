@@ -31,7 +31,6 @@ const Contact = () => {
 				"template_cyr4p2v",
 				{
 					form_name: form.name,
-					to_name: "Mai",
 					form_email: form.email,
 					to_name: "maimohammed928@gmail.com",
 					message: form.message,

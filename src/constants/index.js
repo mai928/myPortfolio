@@ -2,8 +2,6 @@ import {
 	mobile,
 	web,
 	javascript,
-	typescript,
-	html,
 	css,
 	reactjs,
 	redux,

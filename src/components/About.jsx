@@ -62,6 +62,7 @@ const About = () => {
 						className=" mr-1 py-4 rounded-l-[20px] px-14 border-solid border-[2px] green-pink-gradient"
 						href={CV}
 						target="_blank"
+						rel="noreferrer"
 					>
 						{" "}
 						Show CV

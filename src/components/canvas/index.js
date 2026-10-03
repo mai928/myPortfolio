@@ -1,6 +1,17 @@
-import EarthCanvas from "./Earth";
-import BallCanvas from "./Ball";
-import ComputersCanvas from "./Computers";
-import StarsCanvas from "./Stars";
+import React, { lazy, Suspense } from "react";
 
-export { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas };
+const withLazy = (loader) => {
+	const C = lazy(loader);
+	return function LazyCanvas(props) {
+		return (
+			<Suspense fallback={null}>
+				<C {...props} />
+			</Suspense>
+		);
+	};
+};
+
+export const EarthCanvas = withLazy(() => import("./Earth"));
+export const BallCanvas = withLazy(() => import("./Balls"));
+export const ComputersCanvas = withLazy(() => import("./Computers"));
+export const StarsCanvas = withLazy(() => import("./Stars"));

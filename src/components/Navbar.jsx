@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { styles } from "../styles";
 import { menu, close } from "../assets";
-import Mai from "../assets/Mai.webp";
+import Logo from "./Logo";
 import { navLinks } from "../constants";
 import { Link } from "react-scroll";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<img src={Mai} className="w-9 h-9 object-contain" />
+					<Logo className="w-9 h-9" />
 					<p className="text-white text-[18px] flex font-bold cursor-pointer">
 						Mai &nbsp;
 						<span className="mt-[3px]  font-medium md:tracking-wider  text-[15px] text-secondary  sm:tracking-tighter">

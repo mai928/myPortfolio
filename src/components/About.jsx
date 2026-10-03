@@ -6,6 +6,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../components/utils/motion";
 import { SectionWrapper } from "../hoc";
 import CV from "../assets/CV.pdf";
+
 const ServiseCard = ({ title, index, icon }) => {
 	return (
 		<Tilt className="xs:w-[250px] w-full">
@@ -21,7 +22,7 @@ const ServiseCard = ({ title, index, icon }) => {
 						speed: 450,
 					}}
 				>
-					<img className="w-16 h-16 object-contain " src={icon} alt={title} />
+					<img loading="lazy" decoding="async" className="w-16 h-16 object-contain " src={icon} alt={title} />
 					<h3 className="text-white text-[20px] font-bold text-center">
 						{title}
 					</h3>
@@ -67,12 +68,11 @@ const About = () => {
 					</a>
 
 					<a
-						className=" py-4 rounded-r-[20px] px-3 border-solid border-[2px] green-pink-gradient"
+						className=" py-4 rounded-r-[20px] px-10 border-solid border-[2px] green-pink-gradient "
 						href={CV}
 						download={CV}
 					>
-						{" "}
-						<i class="fa-solid fa-download"></i>
+						
 					</a>
 				</motion.div>
 			</div>

@@ -1,17 +1,19 @@
 import React from "react";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import {BallCanvas} from '../components/canvas'
-const Tech = () => {
-	return (
-		<div className="flex flex-row flex-wrap justify-center gap-10">
-			{technologies.map((tech) => (
-				<div key={tech.name} className="w-28 h-28">
-            <BallCanvas icon={tech.icon}/>
-        </div>
-			))}
-		</div>
-	);
-};
+import { BallCanvas } from "./canvas";
 
-export default SectionWrapper(Tech ,'') ;
+const icons = technologies.map((t) => t.icon);
+
+const Tech = () => (
+	<div>
+		<BallCanvas icons={icons} />
+		<ul className="sr-only">
+			{technologies.map((t) => (
+				<li key={t.name}>{t.name}</li>
+			))}
+		</ul>
+	</div>
+);
+
+export default SectionWrapper(Tech, "");

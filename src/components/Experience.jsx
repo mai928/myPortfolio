@@ -18,7 +18,7 @@ const ExperienceCard = ({index, date, title, company_name, iconBg, icon ,points}
 		iconStyle={{ background: iconBg }}
 		icon={
 			<div className="flex justify-center items-center w-full h-full">
-				<img
+				<img loading="lazy" decoding="async"
 					className="w-[80%] h-[80%] object-contain rounded-full"
 					src={icon}
 					alt={company_name}

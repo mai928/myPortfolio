@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";
+import web from "./web.webp";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -27,21 +27,22 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import amazon from "./amazon.png";
-import fitness from "./fitness.png";
-import youtub from "./youtub.png";
-import recipe from "./recipe.png";
-import recipe2 from "./recipe2.png";
-import registation from "./registration.png";
-import registation2 from "./regestration2.png";
-import todo from "./todo.png";
-import job from "./job.png";
-import blog from "./blog.png";
+import carrent from "./carrent.webp";
+import jobit from "./jobit.webp";
+import tripguide from "./tripguide.webp";
+import amazon from "./amazon.webp";
+import fitness from "./fitness.webp";
+import youtub from "./youtub.webp";
+import recipe from "./recipe.webp";
+import recipe2 from "./recipe2.webp";
+import registation from "./registration.webp";
+import registation2 from "./regestration2.webp";
+import todo from "./todo.webp";
+import job from "./job.webp";
+import blog from "./blog.webp";
 import iti from "./iti.png";
-import commerce from './ainshams.jpg'
+import commerce from './ainshams.webp'
+import downloadIcon from './downloadIcon.svg'
 export {
 	commerce,
 	iti,
@@ -84,4 +85,5 @@ export {
 	carrent,
 	jobit,
 	tripguide,
+	downloadIcon
 };

@@ -27,7 +27,7 @@ const ProjectCard = ({
 				}}
 			>
 				<div className="relative w-full h-[230px]">
-					<img
+					<img loading="lazy" decoding="async"
 						className="w-full h-full  object-cover  rounded-2xl "
 						src={image}
 						alt={name}
@@ -37,7 +37,7 @@ const ProjectCard = ({
 							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
 							onClick={() => window.open(source_code_link, "_blank")}
 						>
-							<img
+							<img loading="lazy" decoding="async"
 								className="w-1/2 h-1/2 object-cover"
 								src={github}
 								alt={github}

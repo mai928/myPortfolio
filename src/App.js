@@ -8,9 +8,7 @@ import {
 	Works,
 	Contact,
 	StarsCanvas,
-	MobileHero,
 } from "./components";
-import { useState } from "react";
 function App() {
 	return (
 		<BrowserRouter>
